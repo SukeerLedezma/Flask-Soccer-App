@@ -26,9 +26,18 @@ The project is organized with the following directory structure:
     - Defines the data models for leagues, teams, and players.
     - Includes routes for rendering HTML pages and fetching data from the database.
 
+## Documented Issues
+- The purpose of the index page is to show the top 3 leagues, however, the three leagues repeat many times. 
+- Images are not showing up for the perspective leagues, teams, and players. The error I’m seeing is that the images aren’t being retrieved from my images folder, which 
+  causes the database not to display the images.
+- Any changes added to the CSS file do not cause any changes to the website, hence the very basic design
 
 ## Project dependencies
 - Flask
 - Flask SQLAlchemy
 
 ## To clone the repository
+- git clone https://github.com/SukeerLedezma/Flask-Soccer-App.git
+
+## Author
+Sukeer Ledezma
