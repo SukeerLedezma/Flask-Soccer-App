@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ team.name }} - Soccer Team{% endblock %}
+
+{% block content %}
+    <h2>{{ team.name }} Team</h2>
+    <img src="{{ url_for('static', filename=team.logo) }}" alt="{{ team.name }} Logo">
+
+    <p>Goals: {{ team.goals }}</p>
+    <p>Games Played: {{ team.games_played }}</p>
+    <p>Wins: {{ team.wins }}</p>
+    <p>Formation: {{ team.formation }}</p>
+    <p>Best Player: {{ team.best_player }}</p>
+
+    <h3>Players</h3>
+    <ul>
+        {% for player in players %}
+            <li>
+                <a href="{{ url_for('player', player_id=player.id) }}">{{ player.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

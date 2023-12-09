@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>{% block title %}Soccer App{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Soccer App</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+        </ul>
+    </nav>
+
+    <section id="content">
+        {% block content %}{% endblock %}
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Soccer App</p>
+    </footer>
+</body>
+</html>

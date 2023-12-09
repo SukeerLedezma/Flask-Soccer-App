@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}Soccer Leagues{% endblock %}
+
+{% block content %}
+    <h2>Top Soccer Leagues</h2>
+    <ul>
+        {% if leagues %}
+            {% for league in leagues %}
+                <li>
+                    <img src="{{ url_for('static', filename=league.logo) }}" alt="{{ league.name }} Logo">
+                    <a href="{{ url_for('league', league_id=league.id) }}">{{ league.name }}</a>
+                </li>
+            {% endfor %}
+        {% else %}
+            <li>No leagues available</li>
+        {% endif %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ league.name }} - Soccer League{% endblock %}
+
+{% block content %}
+    <h2>{{ league.name }} League</h2>
+    <p>Location: {{ league.location }}</p>
+    <p>Total Games Played: {{ league.games_played }}</p>
+    <p>Viewers: {{ league.viewers }}</p>
+
+    <h3>Teams</h3>
+    <ul>
+        {% for team in teams %}
+            <li>
+                <a href="{{ url_for('team', team_id=team.id) }}">{{ team.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
